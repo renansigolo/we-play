@@ -1,6 +1,6 @@
-# ADHD
+# We Play
 
-The ADHD app has been develop to help people.
+A simple ping pong app.
 
 ## Development server
 
