@@ -1,12 +1,39 @@
-<!-- <ion-header>
-
-  <ion-navbar>
-    <ion-title>login</ion-title>
-  </ion-navbar>
-
-</ion-header> -->
-
-
 <ion-content padding>
-<h1>Login Page</h1>
+<h1 text-center>Login Page</h1>
+
+<ion-card>
+  <ion-card-header text-center>
+    Login
+  </ion-card-header>
+  <ion-card-content>
+    <form [formGroup]="loginForm" (ngSubmit)="submitLogin()">
+
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+<ion-row justify-content-center>
+  <button ion-button type="submit" [disabled]="loginForm.invalid">Login</button>
+</ion-row>
+
+    </form>
+  </ion-card-content>
+</ion-card>
+
+<ion-item>Register...</ion-item>
+
+<ion-item>Forgot your password...</ion-item>
+
 </ion-content>

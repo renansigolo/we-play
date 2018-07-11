@@ -1,10 +1,72 @@
-<!-- <ion-header>
-  <ion-navbar>
-    <ion-title>signup</ion-title>
-  </ion-navbar>
-</ion-header> -->
-
-
 <ion-content padding>
-<h1>Signup Page</h1>
+<h1 text-center>Signup Page</h1>
+
+<ion-card>
+  <ion-card-header text-center>
+    Signup
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list no-lines>
+
+		<form [formGroup]="signupForm" (ngSubmit)="submitSignup()">
+
+				<ion-row>
+					<ion-col>
+						<ion-item>
+							<ion-input type="text" placeholder="Full Name" formControlName="name"></ion-input>
+						</ion-item>
+					</ion-col>
+				</ion-row>
+				<ion-item *ngIf="name.invalid && name.touched && !name.pristine" text-wrap>
+					<p *ngIf="name.errors?.required">Name field is mandatory</p>
+					<p *ngIf="name.errors?.maxlength">Too long</p>
+					<p *ngIf="name.errors?.minlength">Too short</p>
+					<p *ngIf="name.errors?.pattern">Must contain letters only and a first and last name. Eg.(Alan Turing)</p>
+				</ion-item>
+
+				<ion-row>
+					<ion-col>
+						<ion-item>
+							<ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+						</ion-item>
+					</ion-col>
+				</ion-row>
+				<ion-item *ngIf="email.invalid && email.touched && !email.pristine" text-wrap>
+					<p *ngIf="email.errors?.required">Email field is mandatory.</p>
+					<p *ngIf="email.errors?.email">Email must be valid. Eg.(alan.turing@gmail.com)</p>
+				</ion-item>
+
+				<ion-row>
+					<ion-col>
+						<ion-item>
+							<ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+						</ion-item>
+					</ion-col>
+				</ion-row>
+
+      	<!-- <ion-row>
+					<ion-col>
+						<ion-item>
+							<ion-input formControlName="repeatPassword" type="password" placeholder="Repeat Password"></ion-input>
+						</ion-item>
+					</ion-col>
+				</ion-row>
+				<ion-item *ngIf="repeatPassword.invalid && repeatPassword.touched && !repeatPassword.pristine" text-wrap>
+					<p *ngIf="repeatPassword.errors?.required">Field is mandatory.</p>
+					<p *ngIf="repeatPassword.errors?.maxlength">Must be at maximun 30 digits long.</p>
+					<p *ngIf="repeatPassword.errors?.minlength">Must be a least 6 digits long.</p>
+				</ion-item> -->
+
+        <ion-row justify-content-center>
+          <button ion-button type="submit" [disabled]="signupForm.invalid">Register</button>
+        </ion-row>
+
+		</form>
+
+	</ion-list>
+  </ion-card-content>
+</ion-card>
+
+<ion-item>Login here</ion-item>
+
 </ion-content>

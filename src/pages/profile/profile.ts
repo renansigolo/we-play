@@ -9,6 +9,22 @@ import {IonicPage, NavController, NavParams} from 'ionic-angular'
 export class ProfilePage {
 	items = [
 		{
+			title: 'Rating',
+			description: '1500'
+		},
+		{
+			title: 'Played',
+			description: '0'
+		},
+		{
+			title: 'Won',
+			description: '0'
+		},
+		{
+			title: 'Lost',
+			description: '0'
+		},
+		{
 			title: 'Member Since',
 			description: '2018'
 		},
