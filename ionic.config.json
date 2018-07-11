@@ -1,0 +1,8 @@
+{
+  "name": "we-play",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
