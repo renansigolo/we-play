@@ -1,11 +1,15 @@
 {
-  "rules": {
-    "no-duplicate-variable": true,
-    "no-unused-variable": [
-      true
-    ]
-  },
-  "rulesDirectory": [
-    "node_modules/tslint-eslint-rules/dist/rules"
-  ]
+	"extends": ["tslint:recommended", "tslint-config-prettier"],
+	"rules": {
+		"object-literal-sort-keys": false,
+		"no-unused-variable": true,
+		"member-access": [true, "no-public"],
+		"no-floating-promises": true,
+		"promise-function-async": true,
+		"no-console": {
+			"severity": "warning",
+			"options": ["log"]
+		}
+	},
+	"rulesDirectory": ["node_modules/tslint-eslint-rules/dist/rules"]
 }

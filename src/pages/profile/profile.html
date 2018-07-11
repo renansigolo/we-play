@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+<!-- 
+<ion-row>
+My Name
+</ion-row> -->
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      <ion-row align-items-center justify-content-between margin>
+      <h2>{{item.title}}</h2>
+      <h3>{{item.description}}</h3>
+    </ion-row>
+    </ion-item>
+  </ion-list>
+</ion-content>

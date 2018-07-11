@@ -1,19 +1,18 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core'
 
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
-import { HomePage } from '../home/home';
+import {AddMatchesPage} from '../add-matches/add-matches'
+import {LeaderboardPage} from '../leaderboard/leaderboard'
+import {ProfilePage} from '../profile/profile'
+import {RecentMatchesPage} from '../recent-matches/recent-matches'
 
 @Component({
-  templateUrl: 'tabs.html'
+	templateUrl: 'tabs.html'
 })
 export class TabsPage {
+	tab1Root = ProfilePage
+	tab2Root = LeaderboardPage
+	tab3Root = RecentMatchesPage
+	tab4Root = AddMatchesPage
 
-  tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = ContactPage;
-
-  constructor() {
-
-  }
+	// constructor() {}
 }

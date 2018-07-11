@@ -1,0 +1,12 @@
+{
+	"extends": "stylelint-config-sass-guidelines",
+	"rules": {
+		"selector-type-no-unknown": [
+			true,
+			{
+				"ignore": ["custom-elements"]
+			}
+		],
+		"indentation": "tab"
+	}
+}
